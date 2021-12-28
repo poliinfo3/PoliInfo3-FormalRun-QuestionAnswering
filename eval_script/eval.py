@@ -31,6 +31,7 @@ def main():
         unidic_path = f"{dicdir}/unidic" \
             if os.path.exists(f"{dicdir}/unidic") else None
     except IOError:
+        sysconfdir = "/etc"
         unidic_path = None
 
     gs_data = (Path(__file__).parents[0] / GS_FILENAME)
